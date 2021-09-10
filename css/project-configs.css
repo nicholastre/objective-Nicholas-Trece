@@ -3,5 +3,12 @@ html {
   --font-family-secondary: 'PT Sans Caption', sans-serif;
   --color-primary: #555555;
   --color-secondary: #8E8E8E;
+  --color-tertiary: #F5F5F5;
+  --color-light: #ffff;
   --color-background: #E5E5E5;
+}
+
+.container{
+  padding-left: 24px;
+  padding-right: 24px;
 }
