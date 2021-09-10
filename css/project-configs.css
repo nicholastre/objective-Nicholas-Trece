@@ -1,0 +1,7 @@
+html {
+  --font-family-primary: 'PT Sans', sans-serif;
+  --font-family-secondary: 'PT Sans Caption', sans-serif;
+  --color-primary: #555555;
+  --color-secondary: #8E8E8E;
+  --color-background: #E5E5E5;
+}
