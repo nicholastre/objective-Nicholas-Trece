@@ -1,9 +1,10 @@
 @import "./project-configs.css";
+@import "./header.css";
 
 *,
 *::after,
 *::before {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 img{
@@ -11,8 +12,8 @@ img{
 }
 
 body{
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
