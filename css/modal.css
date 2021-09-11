@@ -1,0 +1,105 @@
+.modal {
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 40px;
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    align-items: center;
+}
+
+.modal.is-active {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.8s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content{
+    display: flex;
+    background-color: var(--color-light);
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    transition: 0.3s;
+    width: 300px;
+}
+
+.modal__text{
+    flex: 1;
+    align-self: flex-start;
+}
+
+.modal-content h3{
+    font-family: var(--font-family-secondary);
+    color: var(--color-quartenary);
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0;
+    margin-bottom: 5px;
+    letter-spacing: 0.25px;
+    text-align: center;
+}
+
+.content__photo {
+    border-radius: 6px;
+    width: 100px;
+    height: 150px;
+    display: block;
+    margin-right: 5px;
+    object-fit: cover;
+}
+
+.modal__text a{
+    font-family: var(--font-family-secondary);
+    color: var(--color-light);
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0;
+    font-weight: bold;
+    margin-bottom: 5px;
+    letter-spacing: 0.25px;
+    display: block;
+    text-align: center;
+    transition: 400ms;
+    padding: 5px;
+    background-color: var(--color-quartenary);
+    border: 1px solid transparent;
+    text-decoration: none;
+}
+
+.modal__text a:hover{
+    color: var(--color-quartenary);
+    background-color: var(--color-light);
+    border-color: var(--color-quartenary);
+    font-size: 16px;
+}
+
+@media (min-width:768px){
+    .modal-content{
+        width: 400px;
+    }
+}
+
+@media (min-width:1200px){
+    .modal-content{
+        width: 400px;
+        height: 170px;
+    }
+
+    .modal {
+        align-items: unset;
+    }
+}

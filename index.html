@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
         <title>Teste Objective</title>
     </head>
+
     <body>
         <header class="header">
             <div class="container">
@@ -27,5 +29,91 @@
                 </div>
             </div>
         </header>
+        
+        <div class="content-wrapper">
+            <div class="container">
+                <section class="search-block">
+                    <h2>Busca de personagens</h2>
+                    <div class="block-input">
+                        <h3>Nome do personagem</h3>
+                        <form action="" id="form">
+                            <div class="input-item">
+                                <input class="item__input" id="search" type="text" placeholder="Search">
+                                <div class="submit-block">
+                                    <input type="submit" id="submit">
+                                    <label for="submit">
+                                        <i class="fas fa-search"></i>
+                                    </label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </div>
+
+            <section class="heros">
+                <div class="container">
+                    <div class="hero-label">
+                        <p class="label__character">Personagem</p>
+                        <p class="label__series">Series</p>
+                        <p class="label__events">Eventos</p>
+                    </div>
+                </div>
+                <div class="container heros-listing">
+<!--                <div class="hero-item">
+                        <div class="hero-header">
+                            <img class="header__photo" src="http://i.annihil.us/u/prod/marvel/i/mg/9/a0/4ce5a526259fd.jpg">
+                            <h2>Weapon Omega</h2>
+                        </div>
+                        <div class="hero__series">
+                            <p>Marvel Comics Presents (2007 - 2008)</p>
+                            <p>Nick Fury, Agent of S.H.I.E.L.D. (1989 - 1992)</p>
+                            <p>Uncanny X-Men (1963 - 2011)</p>
+                        </div>
+                        <div class="hero__events">
+                            <p>Dark Reign</p>
+                        </div>
+                        <div class="modal">
+                            <div class="modal-content">
+                                <img class="content__photo" src="http://i.annihil.us/u/prod/marvel/i/mg/9/a0/4ce5a526259fd/portrait_xlarge.jpg">
+                                <div class="modal__text">
+                                    <h3>Detalhes</h3>
+                                    <a href="http://marvel.com/characters/2539/weapon_omega?utm_campaign=apiRef&amp;utm_source=0158a0135bfb99e5458bf1217a655f11">detail</a><a href="http://marvel.com/universe/Wild_Child?utm_campaign=apiRef&amp;utm_source=0158a0135bfb99e5458bf1217a655f11">wiki</a>
+                                    <a href="http://marvel.com/comics/characters/1011133/weapon_omega?utm_campaign=apiRef&amp;utm_source=0158a0135bfb99e5458bf1217a655f11">comiclink</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <div class="container">
+                <ul class="pagination">
+                    <li class="first">
+                        <i class="fas fa-angle-double-left"></i>
+                    </li>
+                    <li class="prev">
+                        <i class="fas fa-angle-left"></i>
+                    </li>
+                    <div id="pagination-numbers">
+
+                    </div>
+                    <li class="next">
+                        <i class="fas fa-angle-right"></i>
+                    </li>
+                    <li class="last">
+                        <i class="fas fa-angle-double-right"></i>
+                    </li>
+                </ul>
+            </div>
+        </footer>
     </body>
 </html>
+
+<script src="js/api.js"></script>
+<script src="js/createHero.js"></script>
+<script src="js/search.js"></script>
+<script src="js/pagination.js"></script>
+<script src="js/modal.js"></script>
