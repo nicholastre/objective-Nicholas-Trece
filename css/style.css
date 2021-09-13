@@ -2,6 +2,8 @@
 @import "./header.css";
 @import "./page-content.css";
 @import "./modal.css";
+@import "./search.css";
+@import "./pagination.css";
 
 *,
 *::after,

@@ -5,6 +5,7 @@ form.addEventListener('submit', function() {
     event.preventDefault();
     searchName = search.value;
     getCharacters(0,searchName);
+    
     let heroCards = document.querySelectorAll('.hero-item');
 
     heroCards.forEach(element => {

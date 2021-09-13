@@ -8,36 +8,82 @@
     display: flex;
     justify-content: center;
     background: rgba(0, 0, 0, 0.8);
-    padding: 40px;
+    padding: 20px;
     z-index: 9999;
     visibility: hidden;
     opacity: 0;
-    transition: 0.5s;
+    transition: 400ms;
     align-items: center;
 }
 
 .modal.is-active {
     visibility: visible;
     opacity: 1;
-    transition: 0.8s;
+
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .modal-content{
-    display: flex;
     background-color: var(--color-light);
-    align-items: center;
-    justify-content: center;
     padding: 10px;
     transition: 0.3s;
-    width: 300px;
+    width: 100%;
+    height: max-content;
 }
 
-.modal__text{
+.content__info{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.info__text{
     flex: 1;
-    align-self: flex-start;
+}
+
+.info__description p{
+    font-family: var(--font-family-primary);
+    margin: 0;
+    font-size: 12px;
+    margin-bottom: 9px;
+    color: var(--color-secondary);
+    max-height: 75px;
+    overflow: auto;
+}
+
+.info__description h4 {
+    font-family: var(--font-family-secondary);
+    color: var(--color-quartenary);
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0;
+    margin-bottom: 5px;
+    letter-spacing: 0.25px;
+    text-align: left;
+}
+
+.info__description{
+    min-width: 50%;
+}
+
+.info__description p::-webkit-scrollbar{
+    width: 5px;
+    height: 4px;
+}
+
+.info__description p::-webkit-scrollbar-track{
+    background-color: var(--color-light);
+}
+
+.info__description p::-webkit-scrollbar-thumb{
+    background-color: var(--color-quartenary);
+}
+
+.info__description p::-webkit-scrollbar-thumb{
+    background-color: var(--color-quartenary);
 }
 
 .modal-content h3{
@@ -52,16 +98,18 @@
     text-align: center;
 }
 
-.content__photo {
+.info__photo {
     border-radius: 6px;
     width: 100px;
     height: 150px;
     display: block;
     margin-right: 5px;
+    margin-bottom: 10px;
     object-fit: cover;
+    animation: wave 2s linear infinite;
 }
 
-.modal__text a{
+.info__text a{
     font-family: var(--font-family-secondary);
     color: var(--color-light);
     text-transform: uppercase;
@@ -80,7 +128,7 @@
     text-decoration: none;
 }
 
-.modal__text a:hover{
+.info__text a:hover{
     color: var(--color-quartenary);
     background-color: var(--color-light);
     border-color: var(--color-quartenary);
@@ -90,14 +138,13 @@
 @media (min-width:768px){
     .modal-content{
         width: 400px;
-    }
+    } 
 }
 
 @media (min-width:1200px){
     .modal-content{
         width: 400px;
-        height: 170px;
-    }
+    } 
 
     .modal {
         align-items: unset;

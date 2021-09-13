@@ -37,12 +37,11 @@ async function getCharacters(offset = 20, name = '', limit = 20) {
 
     let response = await fetch(url);
     let characters = await response.json();
-
-    //console.log (characters.data.results);
-
     let htmlPagination = generatePagination(characters.data.limit, characters.data.total);
     let paginationNumbers = document.getElementById('pagination-numbers');
     let heroList = document.querySelector('.heros-listing');
+
+    console.log(characters.data.results)
 
     heroList.innerHTML = renderCharacters(characters.data.results);
     paginationNumbers.innerHTML= '';
@@ -52,7 +51,7 @@ async function getCharacters(offset = 20, name = '', limit = 20) {
 
         itemNumber.forEach(element => {
             if (page == element.innerHTML) {
-                console.log('entrou');
+
                 element.classList.add('is-active');
             } else{
                 element.classList.remove('is-active');

@@ -1,0 +1,68 @@
+.pagination{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.first, .prev, .next, .last{
+    margin-right: 16px;
+}
+
+.pagination .numbers{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+.pagination .numbers::-webkit-scrollbar{
+    width: 5px;
+    height: 4px;
+}
+
+.pagination .numbers::-webkit-scrollbar-track{
+    background-color: var(--color-light);
+}
+
+.pagination .numbers::-webkit-scrollbar-thumb{
+    background-color: var(--color-quartenary);
+}
+
+.pagination .numbers::-webkit-scrollbar-thumb{
+    background-color: var(--color-quartenary);
+}
+
+.pagination i{
+    color: var(--color-secondary);
+    cursor: pointer;
+    transition: 400ms;
+}
+
+.pagination i:hover{
+    color: var(--color-quartenary);
+}
+
+.numbers-item{
+    font-family: var(--font-family-primary);
+    min-width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    background-color: var(--color-tertiary);
+    border: 1px solid var(--color-background);
+    color: var(--color-primary);
+    transition: 400ms;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+.numbers-item:hover, .numbers-item.is-active{
+    border-color: var(--color-quartenary);
+    background-color: var(--color-quartenary);
+    color: var(--color-light);
+
+}

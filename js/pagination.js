@@ -5,8 +5,6 @@ function next() {
     if(page > totalPages){
         page--;
     }
-
-    console.log('pagina atual no next',page);
 }
 
 function prev() {
@@ -15,8 +13,6 @@ function prev() {
     if(page < 1) {
         page++;
     }
-
-    console.log('pagina atual no prev',page);
 }
 
 function goTo(number) {
@@ -29,8 +25,6 @@ function goTo(number) {
     if(number > totalPages){
         number = totalPages;
     }
-
-    console.log('pagina atual no goTo',page);
 }
 
 
@@ -55,22 +49,10 @@ function generatePagination(itemsPerPage, totalItems) {
         }
     }
     
-    console.log('buttons',buttonsLimitLeft,buttonsLimitright );
-
-    console.log(page);
-
-    console.log(itemsPerPage, totalItems, totalPages);
     pagination = '<ul class="numbers">';
 
-/*     for (let i = 1; i < totalPages; i++) {
-        pagination += `<li class="numbers-item" onclick="getCharacters(${i})">${i}</li>`;
-        //onclick="getCharacters(${i}),currentPage(${i});"
-    } */
-
     for (let page = buttonsLimitLeft; page <= buttonsLimitright; page++) {
-        console.log('dentro do for',page);
         pagination += `<li class="numbers-item" onclick="getCharacters(${page}), goTo(${page})">${page}</li>`;
-        //onclick="getCharacters(${page}, goTo(${page},${totalPages})"
     }
 
     pagination += '</ul>';
