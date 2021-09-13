@@ -32,19 +32,34 @@ function renderCharacters(heros) {
             html += `
             <div class="modal">
                 <div class="modal-content">
-                    <img class="content__photo" src="${element.thumbnail.path}/portrait_xlarge.${element.thumbnail.extension}">
+                    <h3>Detalhes</h3>
+                    <div class="content__info">
+                        <img class="info__photo" src="${element.thumbnail.path}/portrait_xlarge.${element.thumbnail.extension}">
             `;
-                    html += '<div class="modal__text"><h3>Detalhes</h3>'; 
+                        html += '<div class="info__text">'; 
 
-                        element.urls.forEach(details => {
-                            html += `<a href="${details.url}">${details.type}</a>` 
-                        });
+                            element.urls.forEach(details => {
+                                if (details.type == 'detail'){
+                                    html += `<a href="${details.url}">Detalhes</a>` 
+                                } else {
+                                    html += `<a href="${details.url}">${details.type}</a>` 
+                                }
+                            });
 
+                        html += '</div>';
+
+                        if (element.description != ''){
+                            html += '<div class="info__description"><h4>Descrição</h4>';
+                                
+                                html +=`<p>${element.description}</p>`;
+    
+                            html += '</div>';
+                        }
+                        
                     html += '</div>';
                 html += '</div>';
             html += '</div>';
         html += '</div>'; 
-
     });
 
     return html;
