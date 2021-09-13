@@ -41,8 +41,6 @@ async function getCharacters(offset = 20, name = '', limit = 20) {
     let paginationNumbers = document.getElementById('pagination-numbers');
     let heroList = document.querySelector('.heros-listing');
 
-    console.log(characters.data.results)
-
     heroList.innerHTML = renderCharacters(characters.data.results);
     paginationNumbers.innerHTML= '';
     paginationNumbers.innerHTML = htmlPagination;
