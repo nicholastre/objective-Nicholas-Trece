@@ -33,6 +33,7 @@ function renderCharacters(heros) {
             <div class="modal">
                 <div class="modal-content">
                     <h3>Detalhes</h3>
+                    <h4>${element.name}</h4>
                     <div class="content__info">
                         <img class="info__photo" src="${element.thumbnail.path}/portrait_xlarge.${element.thumbnail.extension}">
             `;
